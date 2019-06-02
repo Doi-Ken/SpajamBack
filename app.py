@@ -2,7 +2,7 @@ from flask import Flask, request, json, jsonify
 app = Flask(__name__)
 
 tasks = {
-    '1': 'shopping',
+    '1': 'shopping doiken',
     '2': 'watching kitaguchi'
 }
 
