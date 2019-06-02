@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 tasks = {
     '1': 'shopping',
-    '2': 'watching'
+    '2': 'watching kitaguchi'
 }
 
 @app.route('/tasks', methods=['GET'])
