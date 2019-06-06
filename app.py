@@ -1,5 +1,7 @@
 from flask import Flask, request, json, jsonify
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 tasks = {
     '1': 'shopping doiken',
