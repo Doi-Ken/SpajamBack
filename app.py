@@ -1,5 +1,8 @@
 from flask import Flask, request, json, jsonify
 from flask_cors import CORS
+import httpclient
+import httpsclient
+
 app = Flask(__name__)
 CORS(app)
 
@@ -13,6 +16,13 @@ def list_all_tasks():
     json = {
         'message': tasks
     }
+
+    # example (api call)
+    # get https://httpbin.org/get
+    httpsclient.get("httpbin.org", "/get")
+    # post https://httpsbin.org/post body json
+    httpsclient.post("httpbin.org", "/post", json)
+    
     return jsonify(json)
 
 @app.route('/tasks/<int:taskid>', methods=['GET'])
