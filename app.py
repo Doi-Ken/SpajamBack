@@ -9,7 +9,7 @@ CORS(app)
 
 tasks = {
     '1': 'shopping doiken',
-    '2': 'watching kitaguchi'
+    '2': 'watching test_naka'
 }
 
 @app.route('/tasks', methods=['GET'])
