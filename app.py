@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 tasks = {
-    '1': 'flask start test4',
+    '1': 'flask start test10',
     '2': 'watching test_naka'
 }
 
