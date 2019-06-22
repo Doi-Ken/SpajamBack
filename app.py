@@ -2,7 +2,8 @@ from httpclient import httpclient
 from httpclient import httpsclient
 from flask import Flask, request, json, jsonify
 from flask_cors import CORS
-
+from PIL import Image
+from io import BytesIO
 
 app = Flask(__name__)
 CORS(app)
@@ -78,4 +79,6 @@ def update_task(taskid):
 @app.route('/garmin', methods=['POST'])
 def garmin_post():
     posted = request.get_json()
-    return posted
+    print posted
+    return jsonify(posted)
+
