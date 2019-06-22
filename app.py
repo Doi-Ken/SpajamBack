@@ -75,8 +75,7 @@ def update_task(taskid):
     }
     return jsonify(json)
 
-@app.route('/garmin', method=['POST'])
+@app.route('/garmin', methods=['POST'])
 def garmin_post():
     posted = request.get_json()
     return posted
-    
