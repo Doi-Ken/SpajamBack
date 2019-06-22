@@ -13,3 +13,10 @@ def post(host, url, data):
     conn.request("POST",url, json.dumps(data), headers)
     response = conn.getresponse()
     print response.read()
+
+def post_jpeg(host, url, data):
+    headers = {"Content-type": "image/jpeg"}
+    conn = httplib.HTTPConnection(host)
+    conn.request("POST", url, data, headers)
+    response = conn.getresponse()
+    print response.read()
