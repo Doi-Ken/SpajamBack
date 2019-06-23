@@ -25,6 +25,14 @@ def list_all_tasks():
     # post https://httpsbin.org/post body json
     httpsclient.post("httpbin.org", "/post", json)
     
+    # filename = 'test.jpg'
+    # img = Image.open(filename)
+    # with open(filename, 'rb') as f:
+    #     binary = f.read()
+    # img = Image.open(BytesIO(binary))
+
+    # # httpsclient.post_jpeg("api-2445582032290.production.gw.apicast.io", "v1/foodrecognition?ad744df19e93b7ea6692eeb1d9afe18c", img)
+    # print img
     return jsonify(json)
 
 @app.route('/tasks/<int:taskid>', methods=['GET'])
