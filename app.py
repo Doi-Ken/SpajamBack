@@ -90,3 +90,19 @@ def garmin_post():
     print posted
     return jsonify(posted)
 
+@app.route('/intake', methods=['POST'])
+def intake():
+    posted = request.get_json()
+    print posted
+    return jsonify(posted)
+
+@app.route('/calories', methods=['GET'])
+def calories():
+    
+    json = {
+        'intake': '100',
+        'consume': '200'
+    }
+    
+    return jsonify(json)
+
